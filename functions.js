@@ -87,10 +87,10 @@ function bodyUnfixPosition() {
 
 }
 
-$('#Popup').on('show.bs.modal', function () {
+$('#Popup').on('shown.bs.modal', function () {
   bodyFixPosition();
 });
 
-$('#Popup').on('hide.bs.modal', function () {
+$('#Popup').on('hidden.bs.modal', function () {
   bodyUnfixPosition();
 });
