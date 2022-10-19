@@ -44,21 +44,25 @@ $('#little-about-me-is').on('click',function(e) {
 
 function bodyFixPosition() {
 
-  if ( !document.body.hasAttribute('data-body-scroll-fix') ) {
+  setTimeout( function() {
+  /* Ставим необходимую задержку, чтобы не было «конфликта» в случае, если функция фиксации вызывается сразу после расфиксации (расфиксация отменяет действия расфиксации из-за одновременного действия) */
 
-    // Получаем позицию прокрутки
-    let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    if ( !document.body.hasAttribute('data-body-scroll-fix') ) {
 
-    // Ставим нужные стили
-    document.body.setAttribute('data-body-scroll-fix', scrollPosition); // Cтавим атрибут со значением прокрутки
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.top = '-' + scrollPosition + 'px';
-    document.body.style.left = '0';
-    document.body.style.width = '100%';
+      // Получаем позицию прокрутки
+      let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-  }
+      // Ставим нужные стили
+      document.body.setAttribute('data-body-scroll-fix', scrollPosition); // Cтавим атрибут со значением прокрутки
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = '-' + scrollPosition + 'px';
+      document.body.style.left = '0';
+      document.body.style.width = '100%';
 
+    }
+
+  }, 15 ); /* Можно задержку ещё меньше, но у меня работало хорошо именно с этим значением на всех устройствах и браузерах */
 
 }
 
@@ -87,10 +91,10 @@ function bodyUnfixPosition() {
 
 }
 
-$('#Popup').on('shown.bs.modal', function () {
+$(document).on('shown.bs.modal', function () { // открытие любого модального окна Bootstrap
   bodyFixPosition();
-});
+})
 
-$('#Popup').on('hidden.bs.modal', function () {
+$(document).on('hidden.bs.modal', function () { // закрытие любого модального окна Bootstrap
   bodyUnfixPosition();
-});
+})
