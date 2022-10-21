@@ -67,7 +67,7 @@ function unlockScroll(){
 $('#Popup').on('hidden.bs.modal', function (e) {
   unlockScroll();
 
-
+});
 $('#Popup').on('shown.bs.modal', function (e) {
   lockScroll();
 });
