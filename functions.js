@@ -47,6 +47,6 @@ $('#Popup').on('shown.bs.modal',function(e) {
   scrollLock.disablePageScroll();
 });
 
-$('#Popup').on('shown.bs.modal',function(e) {
+$('#Popup').on('hidden.bs.modal',function(e) {
   scrollLock.enablePageScroll();
 });
