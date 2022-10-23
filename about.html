@@ -1,0 +1,106 @@
+<!Doctype html>
+<html lang="ru" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="icon.png">
+  <script>
+    tailwind.config = {
+      content: ['about.html'],
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            mainColor: 'black'
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+    a{
+      text-decoration: none;
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+<body style="margin:0;background-color: black;padding-top:  4.5rem;">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="index.html">Math</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="books.html">Учебники</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">Обо мне</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Отзывы</a>
+          </li>
+        </ul>
+        <a href="tel:+7738637657365736" class="btn btn-outline-info my-2 my-sm-0" type="submit">Связаться</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class='d-block' style="color: white; font-size: 30px;">Качественное обучение</h1>
+    <button style="color: white; margin-top: 20px;" class='bg-red-500 hover:bg-red-700 rounded py-2 px-2' id="open-popup">Посмотреть картинки</button>
+
+    <div style='margin-top: 15px;'>
+      <h2 style="color: white;">Обучаю учеников уже 6 лет</h2>
+    </div>
+  </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+$('#open-popup').magnificPopup({
+    items: [
+      {
+        src: 'theme2.png'
+      },
+      {
+        src: 'theme3.png'
+      },
+      {
+        src: 'theme4.png'
+      }
+    ],
+    gallery: {
+      enabled: true,
+      tCounter: '%curr% из %total%'
+    },
+
+    type: 'image'
+});
+
+
+</script>
+</html>
