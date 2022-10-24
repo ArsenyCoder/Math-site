@@ -42,4 +42,7 @@ $('#little-about-me-is').on('click',function(e) {
   alert('Я-репетитор');
 });
 
-scrollLock.disablePageScroll();
+
+$('#Popup').on('show.bs.modal',function(e) {
+  scrollLock.disablePageScroll();
+});
