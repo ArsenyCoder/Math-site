@@ -46,3 +46,7 @@ const $scrollableElement = document.querySelector('#Popup');
 $('#Popup').on('show.bs.modal',function(e) {
   scrollLock.disablePageScroll($scrollableElement);
 });
+
+$('#Popup').on('hidden.bs.modal',function(e) {
+  scrollLock.enablePageScroll($scrollableElement);
+});
