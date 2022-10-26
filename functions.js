@@ -42,7 +42,7 @@ $('#little-about-me-is').on('click',function(e) {
   alert('Я-репетитор');
 });
 
-const $scrollableElement = document.querySelector('#Popup');
+const $scrollableElement = document.querySelector('.modal-dialog');
 $('#Popup').on('show.bs.modal',function(e) {
   scrollLock.disablePageScroll($scrollableElement);
 });
