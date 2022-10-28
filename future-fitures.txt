@@ -1,3 +1,27 @@
-d-flex d-flex justify-content-center
+<form id="send-form-tag" action="" method="POST">
+  <div class="form-group">
+    <label for="recipient-email" class="col-form-label">Email</label>
+       <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="email-form-icon">@</span>
+          </div>
+        <input type="text" class="form-control email-input-validation-control-check" id="recipient-email" aria-describedby="email-form-icon">
+       </div>
+    <span style id="email-error-text-span"></span>
+  </div>
+  <div class="form-group">
+    <label for="recipient-name" class="col-form-label">Имя:</label>
+   <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">✎</span>
+      </div>
+    <input name="name" type="text" class="form-control name-input-validation-control-check" id="recipient-name">
+   </div>
+    <span style id="name-error-text-span"></span>
 
-(footer centering)
+  </div>
+  <div style="margin-top: 15px;" class="form-check">
+    <input type="checkbox" class="form-check-input" id="send_on_email">
+    <label class="form-check-label" for="send_on_email">Отправить на email занятия</label>
+</div>
+</form>

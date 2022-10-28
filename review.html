@@ -4,8 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Визитка</title>
@@ -19,6 +18,120 @@
       body {
         padding-top: 4.5rem;
       }
+
+            footer {
+          padding: 20px 0;
+      }
+      footer .section-title {
+          text-align: center;
+          color: #007b5e;
+          margin-bottom: 50px;
+          text-transform: uppercase;
+      }
+      #footer {
+          background: #6A6A6A;
+      }
+      #footer h5 {
+          padding-left: 10px;
+          border-left: 3px solid #eeeeee;
+          padding-bottom: 6px;
+          margin-bottom: 20px;
+          color:#ffffff;
+      }
+      #footer a {
+          color: #ffffff;
+          text-decoration: none !important;
+          background-color: transparent;
+      }
+      #footer ul.social li {
+          padding: 3px 0;
+      }
+      #footer ul.social li a i {
+          margin-right: 5px;
+          font-size:25px;
+          -webkit-transition: .5s all ease;
+          -moz-transition: .5s all ease;
+          transition: .5s all ease;
+      }
+      #footer ul.social li:hover a i {
+          font-size:30px;
+          margin-top:-10px;
+      }
+      #footer ul.social li a
+      {
+          color:#ffffff;
+      }
+      #footer ul.social li a:hover {
+          color:#eeeeee;
+      }
+      #footer ul.quick-links li a {
+          color:#ffffff;
+      }
+      #footer ul.quick-links li {
+          padding: 3px 0;
+          -webkit-transition: .5s all ease;
+          -moz-transition: .5s all ease;
+          transition: .5s all ease;
+      }
+      #footer ul.quick-links li:hover {
+          padding: 3px 0;
+          margin-left:5px;
+          font-weight:700;
+      }
+      #footer ul.quick-links li a i {
+          margin-right: 5px;
+      }
+      #footer ul.quick-links li:hover a i {
+          font-weight: 700;
+      }
+
+      #footer h5 {
+          color: black;
+          padding-left: 0;
+          border-left: transparent;
+          padding-bottom: 0px;
+          margin-bottom: 10px;
+          font-size: 20px;
+      }
+      #footer h2 {
+      padding: 25px 0;
+      text-align: center;
+      color: #fff;
+      background: #7c8490;
+      }
+
+      #footer .main-footer-link {
+          color: #F87373;
+          text-decoration: none;
+          position: relative;
+      }
+
+
+      #footer .main-footer-link:hover {
+        color: #FF4747;
+      }
+
+      #footer .main-footer-link::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #4A4848;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      #footer .main-footer-link:hover::before {
+        transform: scaleX(1);
+      }
+
+      .comments-text {
+        color: white;
+        font-size:5vw;
+      }
     </style>
   </head>
   <body style="margin: 0; background-color: black;">
@@ -30,25 +143,139 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="books.html">Учебники</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Обо мне</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="review.html">Отзывы</a>
-          </li>
-        </ul>
-        <a href="tel:+7738637657365736" class="btn btn-outline-info my-2 my-sm-0" type="submit">Связаться</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="books.html">Учебники</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Обо мне</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="review.html">Отзывы</a>
+        </li>
+      </ul>
+      <a href="tel:+7738637657365736" class="btn btn-outline-info my-2 my-sm-0" type="submit">Связаться</a>
+    </div>
+  </nav>
+</header>
+<div style='margin-top: 60px;'  class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div style='padding-top: 15px; padding-bottom: 15px; border-radius: 5px;' id="carouselExampleControls" class="carousel slide bg-secondary" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h1 class='comments-text text-center'>Круто</h1>
+          </div>
+          <div class="carousel-item">
+            <h1 class='comments-text text-center'>Здорово</h1>
+          </div>
+          <div class="carousel-item">
+            <h1 class='comments-text text-center'>Замечательно</h1>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Назад</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Далее</span>
+        </a>
       </div>
-    </nav>
-  </header>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
 
+<div style="margin-top: 120px;" class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card">
+      <div class="card-header">
+        Написать
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Пароль">
+        </div>
+        <button style='margin-top: 10px;' type="button" class="btn btn-primary">Отправить</button>
+      </form>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-7"></div>
+  </div>
+</div>
+
+<div style='margin-top: 80px;' id='main-map-id' style="margin-top: 60px;" class="container-fluid">
+  <div class="embed-responsive embed-responsive-21by9">
+    <iframe class="embed-responsive-item" src="https://yandex.ru/map-widget/v1/?um=constructor%3A796fbd2bf6f04e6fdeb55c69cc600fa20a86f603c54e9fe2d75298e3df530f88&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+  </div>
+</div>
+
+<footer id="footer">
+  <div class="container-fluid">
+    <div class="row text-center text-xs-center text-sm-left text-md-left">
+      <div style='margin-top: 15px;' class="col-xs-12 col-sm-4 col-md-4 d-flex d-flex justify-content-center">
+        <div style='display: inline-block;'>
+          <h5>Быстрые ссылки</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a id='up-link'><i class="fa fa-angle-double-right"></i>Наверх</a> </li>
+            <li><a id='about-me-link'><i class="fa fa-angle-double-right"></i> Обо мне</a> </li>
+            <li><a id='open-map-popup'><i class="fa fa-angle-double-right"></i> Где я ? </a> </li>
+            <li><a id='modal-link'><i class="fa fa-angle-double-right"></i> Записаться</a> </li>
+            <li><a id='open-video'><i class="fa fa-angle-double-right"></i> Видео </a> </li>
+          </ul>
+        </div>
+      </div>
+      <div style='margin-top: 15px;' class="col-xs-12 col-sm-4 col-md-4 d-flex d-flex justify-content-center">
+        <div style='display: inline-block;'>
+          <h5>Информация обо мне </h5>
+          <ul class="list-unstyled quick-links">
+            <li> <a id='about-me-id-link'><i class="fa fa-angle-double-right"></i>Перейти</a></li>
+            <li> <a id='little-about-me-is'><i class="fa fa-angle-double-right"></i>Вкратце</a></li>
+            <li> <a id='video-with-me-id'><i class="fa fa-angle-double-right"></i>Видео</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style='margin-top: 15px;' class="col-xs-12 col-sm-4 col-md-4 d-flex d-flex justify-content-center">
+        <div style='display: inline-block;'>
+          <h5> Записаться </h5>
+          <ul class="list-unstyled quick-links">
+            <li> <a href="#"> <i class="fa fa-angle-double-right"> </i> Открыть </a> </li>
+            <li> <a href="#"> <i class="fa fa-angle-double-right"> </i> Помощь </a></li>
+            <li> <a href="#"> <i class="fa fa-angle-double-right"> </i> Доехать </a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+        <ul class="list-unstyled list-inline social text-center">
+          <li class="list-inline-item"> <a href="https://whatsapp.com/"> <i class="fa-brands fa-whatsapp"> </i> </a> </li>
+          <li class="list-inline-item"> <a href="https://telegram.org/"> <i class="fa-brands fa-telegram"> </i> </a> </li>
+          <li class="list-inline-item"> <a href="https://instagram.com/"> <i class="fa-brands fa-instagram"> </i> </a> </li>
+          <li class="list-inline-item"> <a href="tel:+788999838938"> <i class="fa-solid fa-phone"> </i > </a> </li>
+          <li class="list-inline-item"> <a href="https://mail.ru/"> <i class="fa fa-envelope"> </i> </a> </li>
+        </ul>
+      </div>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+        <p class="h6">Copyright©2022<a class="ml-2 main-footer-link" href="index.html">Math.com</a> </p>
+      </div>
+      <hr>
+    </div>
+  </div>
+</footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

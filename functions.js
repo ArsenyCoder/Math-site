@@ -11,7 +11,7 @@ $("#up-link").click(function(e) {
 });
 
 $('#modal-link').on('click',function(e) {
-  $('#Popup').modal();
+  $('body,html').animate({ scrollTop: $('#registration-card').offset().top - ($(window).height() - $('#registration-card').height()) / 2},1500);
 });
 
 $('#about-me-link').on('click',function(e) {
