@@ -12,7 +12,7 @@
 </head>
 <body id='body' style="margin: 0;background-color: black;">
 <header id='header'>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav id='nav' class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="index.html">Math</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -268,6 +268,20 @@
            <div id='registration-card' class="card bg-light">
             <h5 class="card-header">Записаться на занятие</h5>
               <div class="card-body">
+                <div id='lesson-good-alert' style='display: none;'  class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>Всё прошло успешно )</strong> Вы записаны
+                  <button onclick='$("#lesson-good-alert").css("display","none")' type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div id='lesson-bad-alert' style='display: none;' class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong>Что-то пошло нетак (</strong> Введите данные ещё раз
+                  <button type="button" class="close" onclick='$("#lesson-bad-alert").css("display","none")' aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
                 <form id="send-form-tag" action="" method="POST">
                   <div class="form-group">
                     <label for="recipient-email" class="col-form-label">Email</label>
@@ -294,7 +308,7 @@
                     <input type="checkbox" class="form-check-input" id="send_on_email">
                     <label class="form-check-label" for="send_on_email">Отправить на email занятия</label>
                   </div>
-                <button style='margin-top: 10px;' type="button" class="btn btn-primary">Запись</button>
+                <button id='Send-form-button' style='margin-top: 10px;' type="button" class="btn btn-primary">Запись</button>
                 </form>
               </div>
             </div>
@@ -310,7 +324,8 @@
     <div style="margin-top: 50px;" class="col-sm-6">
       <div class="card">
         <div class="card-body">
-          <h5 style="display: static;" class="card-title">1500 рублей</h5>
+          <h5 style="display: static;" class="card-title text-center number-shrift">1500 рублей</h5>
+          <hr>
           <p class="card-text">Занятие идёт 1 час, мы решаем задачи, повторяем школьную программу или готовимся к поступление. Это не самый выгодный вариант. Он подойдёт вам, только если вы не знаете точное расписания хождения</p>
           <a href="#" class="btn btn-primary">Перейти</a>
         </div>
@@ -319,7 +334,8 @@
     <div style="margin-top: 50px;" class="col-sm-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">3200 рублей</h5>
+          <h5 class="card-title text-center number-shrift">3200 рублей</h5>
+          <hr>
           <p class="card-text">Вы покупаете 4 занятие с неплохой скидкой. Мы занимаемся 4 раза. Этот вариант вам подойдёт для того, чтобы не оставать от обучения и понимать школьную программу. Этот вариант довольно выгоден. Но вы можете получить большую скидку</p>
           <a href="#" class="btn btn-primary">Перейти</a>
         </div>
@@ -329,7 +345,8 @@
     <div style="margin-top: 50px;" class="col-sm-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">11000 рублей</h5>
+          <h5 class="card-title text-center number-shrift">11000 рублей</h5>
+          <hr>
           <p class="card-text">12 занятий, большой эконом. Этот вариант очень выгоден. Прекрасно подойдёт для поступления в новую школу, для дополнительных занятий подготовки к экзаменам и олимпиадам. Вы можете выбрать удобный вам тариф. Вы также можете выбрать нужный вам раздел в следующем пункте</p>
           <a href="#" class="btn btn-primary">Перейти</a>
         </div>
@@ -339,7 +356,8 @@
     <div style="margin-top: 50px;" class="col-sm-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Вы выбираете</h5>
+          <h5 class="card-title text-center number-shrift">Вы выбираете</h5>
+          <hr>
           <p class="card-text">Перейдя по ссылке, вы можете пройти тест на тот тариф, который вам больше подходит, либо позвонить мне и договориться об этом лично. Здесь вы можете выбрать любую расстановку времени для вашего удобства. Также вы можете просто заполнить форму и я сама с вами свяжусь</p>
           <a href="#" class="btn btn-primary">Подобрать</a>
         </div>
@@ -360,7 +378,7 @@
   </div>
 </div>
 <footer id="footer">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row text-center text-xs-center text-sm-left text-md-left">
       <div style='margin-top: 15px;' class="col-xs-12 col-sm-4 col-md-4 d-flex d-flex justify-content-center">
         <div style='display: inline-block;'>
@@ -369,7 +387,7 @@
             <li><a id='up-link'><i class="fa fa-angle-double-right"></i>Наверх</a> </li>
             <li><a id='about-me-link'><i class="fa fa-angle-double-right"></i> Обо мне</a> </li>
             <li><a id='open-map-popup'><i class="fa fa-angle-double-right"></i> Где я ? </a> </li>
-            <li><a id='modal-link'><i class="fa fa-angle-double-right"></i> Записаться</a> </li>
+            <li><a id='modal-link'><i class="fa fa-angle-double-right"></i> Запись</a> </li>
             <li><a id='open-video'><i class="fa fa-angle-double-right"></i> Видео </a> </li>
           </ul>
         </div>
@@ -386,7 +404,7 @@
       </div>
       <div style='margin-top: 15px;' class="col-xs-12 col-sm-4 col-md-4 d-flex d-flex justify-content-center">
         <div style='display: inline-block;'>
-          <h5> Записаться </h5>
+          <h5>Записаться </h5>
           <ul class="list-unstyled quick-links">
             <li> <a href="#"> <i class="fa fa-angle-double-right"> </i> Открыть </a> </li>
             <li> <a href="#"> <i class="fa fa-angle-double-right"> </i> Помощь </a></li>
