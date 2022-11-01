@@ -21,7 +21,7 @@ $('#about-me-link').on('click',function(e) {
 
 $('#open-video').on('click',function(e) {
   e.preventDefault();
-  $('body,html').animate({ scrollTop: $('#main-video-container').offset().top - $('#nav').height() - ($(window).height() - $('#main-video-container').height() - $('#nav').height() / 2) / 2},1500);
+  $('body,html').animate({ scrollTop: $('#main-video-container').offset().top - $('#nav').height() - 10 - ($(window).height() - $('#main-video-container').height() - $('#nav').height()) / 2},1500);
   window.setTimeout(OpenMainVideo, 1500);
 });
 
